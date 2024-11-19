@@ -47,7 +47,8 @@ export class FoodDiaryController {
     async allByUserId(id: string, res: Response) {
   
         const foodDiary = await this.foodDiaryRepository.find({
-            where: { userId: id }
+            where: { userId: id },
+            relations: ["diaryEntry"]
         })
 
         if (!foodDiary) {
