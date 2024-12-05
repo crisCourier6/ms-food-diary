@@ -92,7 +92,7 @@ export class MainController{
     }
     // diaryEntryRemoveById() elimina el rol con la id indicada en los parámetros de la URI
     async diaryEntryRemoveById(req: Request, res: Response, next: NextFunction, channel: Channel) {
-        return this.diaryEntryController.remove(req.params.entryId, res, next)
+        return this.diaryEntryController.remove(req, res, next)
     }
 
     async diaryEntryRemoveByIdGoogle(req: Request, res: Response, next: NextFunction, channel: Channel) {

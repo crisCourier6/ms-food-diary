@@ -30,6 +30,6 @@ AppDataSource.initialize().then(async () => {
     // start express server
     app.listen(process.env.PORT)
 
-    console.log("Express server has started on port 3005. Open http://localhost:3005/food-diary to see results")
+    console.log(`Express server has started on port ${process.env.PORT}. Open ${process.env.LOCAL_URL}:${process.env.PORT}/food-diary to see results`)
 
 }).catch(error => console.log(error))

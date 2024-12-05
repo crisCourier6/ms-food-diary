@@ -98,8 +98,8 @@ export const Routes = [{
     action: "diaryEntryUpdate"
 },
 {
-    method: "get",
+    method: "delete",
     route: "/food-diary/byId/:id/entries/:entryId",
     controller: MainController,
-    action: "diaryEntryRemove"
+    action: "diaryEntryRemoveById"
 },]
