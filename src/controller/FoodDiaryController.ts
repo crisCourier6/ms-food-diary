@@ -7,7 +7,7 @@ const GOOGLE_LISTS_URL = 'https://tasks.googleapis.com/tasks/v1/users/@me/lists'
 
 export class FoodDiaryController {
 
-    private foodDiaryRepository = AppDataSource.getRepository(FoodDiary)
+    private readonly foodDiaryRepository = AppDataSource.getRepository(FoodDiary)
 
     async all(req:Request, res:Response) {
         const {d, u} = req.params

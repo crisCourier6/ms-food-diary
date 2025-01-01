@@ -2,14 +2,12 @@ import { NextFunction, Request, Response } from "express"
 import { DiaryEntryController } from "./DiaryEntryController"
 import { FoodDiaryController } from "./FoodDiaryController"
 import { Channel } from "amqplib"
-import { FoodDiary } from "../entity/FoodDiary"
-import axios from "axios"
 import "dotenv/config"
 
 export class MainController{
 
-    private foodDiaryController = new FoodDiaryController
-    private diaryEntryController = new DiaryEntryController
+    private readonly foodDiaryController = new FoodDiaryController
+    private readonly diaryEntryController = new DiaryEntryController
 
     // food diary
 

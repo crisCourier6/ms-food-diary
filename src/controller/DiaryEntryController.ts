@@ -8,8 +8,8 @@ const GOOGLE_TASKS_URL = "https://tasks.googleapis.com/tasks/v1/lists/LIST_ID/ta
 
 export class DiaryEntryController {
 
-    private diaryEntryRepository = AppDataSource.getRepository(DiaryEntry)
-    private foodDiaryRepository = AppDataSource.getRepository(FoodDiary)
+    private readonly diaryEntryRepository = AppDataSource.getRepository(DiaryEntry)
+    private readonly foodDiaryRepository = AppDataSource.getRepository(FoodDiary)
 
     async all(req:Request, res:Response) {
         const {id} = req.params
